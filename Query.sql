@@ -61,9 +61,9 @@ SELECT
 	customers.age AS CustomerAge, products.id AS ProductID, orders.quantity AS ProductQuantity, 
 	products.price AS ProductPrice, Products.Price * Orders.Quantity AS TotalPrice
 FROM 
-	orders
-	JOIN products ON products.id = orders.productid 
-	JOIN customers ON customers.id = orders.customerid
+	Orders
+	JOIN Products ON products.id = orders.productid 
+	JOIN Customers ON customers.id = orders.customerid
 WHERE 
 	products.id = 1 AND customers.age > 30
 GROUP BY 
